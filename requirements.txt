@@ -1,0 +1,29 @@
+# Web Framework & Server
+fastapi[standard]>=0.115.0
+
+# Database
+sqlalchemy[asyncio]>=2.0.35
+asyncpg>=0.30.0
+alembic>=1.14.0
+
+# In-Memory Cache, TTL Hot-Routing & Pub/Sub (Redis 7.0+)
+redis>=5.2.0
+
+# Configuration & Environment Management
+pydantic-settings>=2.6.0
+
+# Authentication & Security (JWT Session Isolation)
+pyjwt>=2.9.0
+passlib[bcrypt]>=1.7.4
+bcrypt>=4.2.0
+
+# Email Parsing, HTML/Tracker Sanitization & Local SMTP Testing
+nh3>=0.2.18
+aiosmtpd>=1.4.6
+
+# Async HTTP Client (Sandbox API / Webhook Testing)
+httpx>=0.27.2
+
+# Testing
+pytest>=8.3.0
+pytest-asyncio>=0.24.0
