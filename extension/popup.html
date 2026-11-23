@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    body { font-family: system-ui, sans-serif; width: 320px; padding: 14px; background: #0f172a; color: #f8fafc; }
+    h3 { margin: 0 0 10px; font-size: 15px; color: #38bdf8; }
+    input, button { width: 100%; box-sizing: border-box; padding: 8px; margin-bottom: 8px; border-radius: 6px; border: 1px solid #334155; }
+    input { background: #1e293b; color: #fff; }
+    button { background: #0284c7; color: #fff; border: none; font-weight: 600; cursor: pointer; }
+    button:hover { background: #0369a1; }
+    button.danger { background: #dc2626; }
+    button.secondary { background: #334155; }
+    button.success { background: #16a34a; }
+    .box { background: #1e293b; padding: 10px; border-radius: 6px; margin-bottom: 10px; word-break: break-all; font-size: 12px; }
+    .otp { font-size: 18px; font-weight: bold; color: #4ade80; letter-spacing: 2px; }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+  <h3>Burnt Mail Automator</h3>
+
+  <!-- Auth Section -->
+  <div id="auth-view">
+    <input type="email" id="email" placeholder="Email (e.g. admin@example.com)" />
+    <input type="password" id="password" placeholder="Password" />
+    <button id="login-btn">Login</button>
+  </div>
+
+  <!-- Main Workspace -->
+  <div id="main-view" class="hidden">
+    <button id="generate-btn">Insta-Burn & Auto-Fill Form</button>
+
+    <div id="active-box" class="box hidden">
+      <div><strong>Active Burnt Box:</strong></div>
+      <div id="burnt-address" style="color:#38bdf8; margin: 4px 0;"></div>
+      <button id="refill-btn" class="secondary">Fill Form Again</button>
+      <button id="check-otp-btn" class="secondary">Poll Inbox for OTP / Link</button>
+      <button id="burn-btn" class="danger">Burn Now (Instant Purge)</button>
+    </div>
+
+    <div id="inbox-box" class="box hidden">
+      <div><strong>Extracted OTP:</strong> <span id="otp-val" class="otp">—</span></div>
+      <button id="fill-otp-btn" class="success hidden" style="margin-top:6px;">Inject OTP into Page</button>
+      <div id="link-val" style="margin-top:6px;"></div>
+    </div>
+  </div>
+
+  <div id="status" style="font-size:11px; color:#94a3b8;"></div>
+  <script src="popup.js"></script>
+</body>
+</html>

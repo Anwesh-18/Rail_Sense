@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Demo Target Signup & OTP Verification</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 400px; margin: 60px auto; padding: 20px; background: #f8fafc; }
+    .card { background: #fff; padding: 24px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+    label { display: block; margin-top: 12px; font-size: 13px; font-weight: 600; }
+    input { width: 100%; padding: 8px; margin-top: 4px; box-sizing: border-box; border: 1px solid #cbd5e1; border-radius: 6px; }
+    button { margin-top: 16px; width: 100%; padding: 10px; background: #0284c7; color: #fff; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Create Account</h2>
+    <form id="signup-form" onsubmit="event.preventDefault(); alert('Registration submitted! Now send webhook OTP and click Poll Inbox.');">
+      <label>First Name</label>
+      <input type="text" name="first_name" placeholder="First Name" />
+
+      <label>Last Name</label>
+      <input type="text" name="last_name" placeholder="Last Name" />
+
+      <label>Email Address</label>
+      <input type="email" name="email_address" placeholder="you@example.com" />
+
+      <label>Billing ZIP</label>
+      <input type="text" name="billing_zip" placeholder="ZIP Code" />
+
+      <button type="submit">Register</button>
+    </form>
+
+    <hr style="margin: 24px 0; border: 0; border-top: 1px solid #e2e8f0;" />
+
+    <h3>Step 2: Enter Verification OTP</h3>
+    <input type="text" name="otp_code" placeholder="6-digit OTP" />
+    <button style="background:#16a34a;" onclick="alert('Account Verified!')">Verify Code</button>
+  </div>
+</body>
+</html>
